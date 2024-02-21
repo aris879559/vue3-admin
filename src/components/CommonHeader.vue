@@ -56,7 +56,10 @@ export default {
     })
     const router = useRouter();
     const handleLogout = () => {
+      // 清除菜单信息
       store.commit('clearMenu');
+      // 清除cookie
+      store.commit('clearToken');
       router.push({
         name: 'login',
       })

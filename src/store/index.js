@@ -36,8 +36,8 @@ export default createStore({
       state.tabsList.splice(res, 1)
     },
     setMenu(state, val) {
-      state.menu = val
-      localStorage.setItem('menu', JSON.stringify(val))
+      state.menu = val;
+      localStorage.setItem('menu', JSON.stringify(val));
     },
     addMenu(state, router) {
       if (!localStorage.getItem('menu')) {
@@ -66,19 +66,19 @@ export default createStore({
       })
     },
     clearMenu(state) {
-      state.menu = []
-      localStorage.removeItem('menu')
+      state.menu = [];
+      localStorage.removeItem('menu');
     },
     setToken(state, val) {
-      state.token = val
-      Cookie.set('token', val)
+      state.token = val;
+      Cookie.set('token', val);
     },
     clearToken(state) {
-      state.token = ''
-      Cookie.remove('token')
+      state.token = '';
+      Cookie.remove('token');
     },
     getToken(state) {
-      state.token = state.token || Cookie.get('token')
+      state.token = state.token || Cookie.get('token');
     }
   }
 })
