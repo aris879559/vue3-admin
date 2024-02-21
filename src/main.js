@@ -24,7 +24,7 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 app.config.globalProperties.$api = api
 store.commit('addMenu', router);
 
-// 校验访问路由是否存在
+  // 校验访问路由是否存在
 function checkRouter(path) {
   let hasCheck = router.getRoutes().filter(route => route.path == path).length
   if (hasCheck) {
